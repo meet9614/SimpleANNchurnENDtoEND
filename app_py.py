@@ -17,7 +17,7 @@ import pickle
 import numpy as np
 from tensorflow.keras.models import load_model
 
-model=load_model('model.h5')
+model=load_model('model.h5', compile=False)
 with open('label_enc_gender.pkl','rb') as file:
   label_enc_gender=pickle.load(file)
 with open('onehot_enc_geo.pkl','rb') as file:
