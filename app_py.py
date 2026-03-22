@@ -17,8 +17,6 @@ import pickle
 import numpy as np
 from tensorflow.keras.models import load_model
 
-model=load_model('model.h5', compile=False)
-model.save("model.keras")
 model = load_model("model.keras")
 with open('label_enc_gender.pkl','rb') as file:
   label_enc_gender=pickle.load(file)
